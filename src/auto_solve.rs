@@ -41,6 +41,11 @@ fn partial_solve(towers: &mut Towers, n: usize, src: usize, tgt: usize) {
 }
 
 
+// 3 moves to move 2 disks
+// moving 3 disks requires moving 2 disks twice and 1 additional move (6+1 = 7 moves)
+// moving 4 disks requires moving 3 disks twice and 1 additional move (7*2 + 1 = 15 moves)
+// moving 5 disks requires moving 4 disks twice and 1 additional move (30 +1 = 31 moves)
+// Time complexity for n disks is O(2^n)
 pub fn auto_solve(towers: &mut Towers) {
     partial_solve(towers, towers.num_disks(), 0, 2);
 }
