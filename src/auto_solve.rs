@@ -26,7 +26,7 @@ fn mov_two(towers: &mut Towers, src: usize, tgt: usize) {
 
 // Moves n disks from the src tower to the tgt tower
 fn partial_solve(towers: &mut Towers, n: usize, src: usize, tgt: usize) {
-    if(n == 1) {
+    if n == 1 {
         towers.mov(src, tgt);
     }
     else if n == 2 {
